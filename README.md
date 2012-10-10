@@ -16,7 +16,7 @@ To quickly see how it works,
 	rabbitmq-plugins enable rabbitmq_management
 	rabbitmq-server.bat
 
-* Open http://localhost:55672/ just to check RabbitMQ is running
+* Open http://localhost:55672/mgmt/ and login as guest/guest, just to check RabbitMQ is running
 * Maven imported spring-integration-amqp-subscribe project into STS IDE 
 * Add spring-integration-amqp-subscribe on the server and start the TC server and "Run on Server", you will notice that the Application Subscribed to RabbitMQ and start listening
 * Run the below command on the command prompt by going to spring-integration-amqp-publish folder
@@ -25,6 +25,6 @@ To quickly see how it works,
 
 Volla, you started see the payload in the subscriber console
 
-Refer this [blog](http://krishnasblog.com/) for more details on the above flow.
+Refer this [blog](http://krishnasblog.com/2012/10/10/publish-subscribe-with-vfabric-rabbitmq-and-spring-integration-using-spring-amqp/) for more details on the above flow.
 
 Feel free to modify this code and use it for your need. 
