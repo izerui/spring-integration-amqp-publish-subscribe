@@ -1,7 +1,7 @@
-Publish Subscribe with vFabric RabbitMQ and Spring Integration using Spring AMQP 
-================================================================================
+AMQP Backed Spring Integration using vFabric RabbitMQ 
+=====================================================
 
-In this project, I will demo the complete end to end Publisher/Subscriber model using Spring Integration and vFabric RabbitMQ. 
+In this project, I will demo AMQP Backed Spring Integration using vFabric RabbitMQ. 
 
 To quickly see how it works,
 
@@ -14,16 +14,13 @@ To quickly see how it works,
 * Open RabbitMQ Command Prompt from the start menu and run below commands
 
 	rabbitmq-plugins enable rabbitmq_management
+
 	rabbitmq-server.bat
 
 * Open http://localhost:55672/mgmt/ and login as guest/guest, just to check RabbitMQ is running
 * Maven imported spring-integration-amqp-subscribe project into STS IDE 
-* Add spring-integration-amqp-subscribe on the server and start the TC server and "Run on Server", you will notice that the Application Subscribed to RabbitMQ and start listening
-* Run the below command on the command prompt by going to spring-integration-amqp-publish folder
-
-	mvn -Dtest=com.goSmarter.amqp.PublisherSubscriberTest test
-
-Volla, you started see the payload in the subscriber console
+* Add spring-integration-amqp-publich-subscribe on the server and start the TC server and "Run on Server", you will notice that the Application Subscribed to RabbitMQ. And by default it created 2 queues: si.fanout.pub-sub-channel, p2p-pollable-channel
+* To demo the Pub/sub model, put a message on to the p2p-pollable-channel, the SI flow gets triggered of
 
 Refer this [blog](http://krishnasblog.com/2012/10/10/publish-subscribe-with-vfabric-rabbitmq-and-spring-integration-using-spring-amqp/) for more details on the above flow.
 
