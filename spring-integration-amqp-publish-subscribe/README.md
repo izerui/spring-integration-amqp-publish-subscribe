@@ -22,6 +22,6 @@ To quickly see how it works,
 * Add spring-integration-amqp-publich-subscribe on the server and start the TC server and "Run on Server", you will notice that the Application Subscribed to RabbitMQ. And by default it created 2 queues: si.fanout.pub-sub-channel, p2p-pollable-channel
 * To demo the Pub/sub model, put a message on to the p2p-pollable-channel, the SI flow gets triggered of
 
-Refer this [blog](http://krishnasblog.com/2012/10/10/publish-subscribe-with-vfabric-rabbitmq-and-spring-integration-using-spring-amqp/) for more details on the above flow.
+Refer this [blog](http://krishnasblog.com/2012/10/18/amqp-backed-spring-integration-using-vfabric-rabbitmq/) for more details on the above flow.
 
 Feel free to modify this code and use it for your need. 
