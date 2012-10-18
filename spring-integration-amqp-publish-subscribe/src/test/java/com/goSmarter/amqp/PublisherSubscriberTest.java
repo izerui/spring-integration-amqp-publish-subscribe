@@ -16,7 +16,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:spring-integration-context.xml"})
+@ContextConfiguration({"classpath:spring-integration-context.xml", 
+	"classpath:spring-integration-test-context.xml"})
 public class PublisherSubscriberTest {
 
 	@Autowired

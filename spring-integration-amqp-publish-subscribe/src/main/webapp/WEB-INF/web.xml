@@ -6,7 +6,7 @@ id="WebApp_ID" version="2.5">
 	<display-name>spring-integration-amqp-subscribe</display-name>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:spring-integration-context.xml</param-value>
+		<param-value>classpath:application-config.xml</param-value>
 	</context-param>
 	<context-param>
 		<param-name>application.configuration.name</param-name>
