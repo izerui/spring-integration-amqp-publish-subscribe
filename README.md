@@ -13,6 +13,6 @@
 -
 该例子是从 https://github.com/skprasadu/spring-integration-amqp-publish-subscribe fork过来的,如果要原滋原味,请移步!
 -
-原文blog地址: blog
+原文blog地址: http://krishnasblog.com/2012/10/18/amqp-backed-spring-integration-using-vfabric-rabbitmq/
 -
 版权声明: 根据您的需要,可以随意修改代码!
