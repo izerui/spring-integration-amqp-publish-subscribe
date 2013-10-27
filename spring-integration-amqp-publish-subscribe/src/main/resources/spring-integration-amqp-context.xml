@@ -17,9 +17,11 @@
 	<!-- Creates a org.springframework.amqp.rabbit.core.RabbitAdmin to manage 
 		exchanges, queues and bindings -->
 	<rabbit:admin connection-factory="connectionFactory" />
-
+	
+	<!-- p2p 通道 -->
 	<int-amqp:channel id="p2p-pollable-channel" connection-factory="connectionFactory" />
 
+	<!-- 创建广播通道 -->
 	<int-amqp:publish-subscribe-channel id="pub-sub-channel" connection-factory="connectionFactory" />
 	
 </beans>

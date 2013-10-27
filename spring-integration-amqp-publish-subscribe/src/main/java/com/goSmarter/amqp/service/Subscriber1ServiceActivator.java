@@ -12,6 +12,6 @@ public class Subscriber1ServiceActivator {
 
 	public void logXml(GenericMessage<?> msg) throws Exception {
 		String text = msg.toString();
-		logger.debug("### PAYLOAD ###" + text);
+		logger.info("### PAYLOAD ###" + text);
 	}
 }

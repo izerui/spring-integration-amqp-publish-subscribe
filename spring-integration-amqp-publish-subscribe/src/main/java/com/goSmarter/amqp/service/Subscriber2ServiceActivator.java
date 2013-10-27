@@ -11,6 +11,6 @@ public class Subscriber2ServiceActivator {
 			.getLog(Subscriber2ServiceActivator.class);
 
 	public void logXml(GenericMessage<?> msg) throws Exception {
-		logger.debug("### PAYLOAD ###" + msg.getPayload());
+		logger.info("### PAYLOAD ###" + msg.getPayload());
 	}
 }

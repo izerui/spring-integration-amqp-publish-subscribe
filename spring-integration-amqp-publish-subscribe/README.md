@@ -1,27 +1,29 @@
-AMQP Backed Spring Integration using vFabric RabbitMQ 
+一个发布,接受消息的实例, spring-integration spring amqp rabbitmq 整合测试例子
 =====================================================
 
-In this project, I will demo AMQP Backed Spring Integration using vFabric RabbitMQ. 
+这个例子中,将使用 Spring Integration 来演示通过rabbitmq 发送接收消息
 
-To quickly see how it works,
+很快你将会看到它是如何工作的,
 
-* Get the latest code
-* Install [ERLang](http://www.erlang.org/download/otp_win32_R15B02.exe)
+步骤:
 
-	Set ERLANG_HOME=[ERLang install location]
+* 获取本实例代码
+* 安装 erlang 运行环境 [ERLang](http://www.erlang.org/)
 
-* Install [RabbitMQ](http://www.rabbitmq.com/releases/rabbitmq-server/v2.8.7/rabbitmq-server-2.8.7.exe) 
-* Open RabbitMQ Command Prompt from the start menu and run below commands
 
+* 安装 [RabbitMQ] (http://www.rabbitmq.com/) 
+* 打开rabbitmq 命令行, 运行:
 	rabbitmq-plugins enable rabbitmq_management
+* 重启rabbitmq 服务
 
-	rabbitmq-server.bat
+* 进入地址 http://localhost:15672/ 并且登录 用户名/密码: guest/guest, 保证rabbitmq 运行中并可看到rabbitmq 实际运行情况.
+* 导入 Maven 工程 spring-integration-amqp-publish-subscribe 到你的ide中, 我使用的是eclipse.
+* 你会发现应用通过两个通道订阅rabbitmq, 这两个: pub-sub-channel, p2p-pollable-channel
+* 例子中 发送/接收 模式, 发送一个消息到 通道: (p2p-pollable-channel) , 这个时候此通道的消息会被转发到 广播通道(pub-sub-channel).
+然后订阅广播通道的两个activator 将会都收到该消息
 
-* Open http://localhost:55672/mgmt/ and login as guest/guest, just to check RabbitMQ is running
-* Maven imported spring-integration-amqp-publish-subscribe project into STS IDE 
-* Add spring-integration-amqp-publish-subscribe on the server and start the TC server and "Run on Server", you will notice that the Application Subscribed to RabbitMQ. And by default it created 2 queues: si.fanout.pub-sub-channel, p2p-pollable-channel
-* To demo the Pub/sub model, put a message on to the p2p-pollable-channel, the SI flow gets triggered of
+请参阅 [blog](http://krishnasblog.com/2012/10/18/amqp-backed-spring-integration-using-vfabric-rabbitmq/) 获取更多消息.
 
-Refer this [blog](http://krishnasblog.com/2012/10/18/amqp-backed-spring-integration-using-vfabric-rabbitmq/) for more details on the above flow.
+版权声明:
 
-Feel free to modify this code and use it for your need. 
+如果需要,你可以随意修改并使用它

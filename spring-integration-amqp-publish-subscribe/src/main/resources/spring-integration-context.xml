@@ -14,6 +14,7 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+<!-- 消息通道桥, p2p-pollable-channel 通道的消息发送到 pub-sub-channel 广播通道,这样所有客户端都可以接受到消息 -->
 	<int:bridge input-channel="p2p-pollable-channel"
 		output-channel="pub-sub-channel" />
 
