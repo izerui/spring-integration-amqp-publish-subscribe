@@ -17,10 +17,6 @@
 	<!-- A reference to the org.springframework.amqp.rabbit.connection.ConnectionFactory -->
 	<rabbit:connection-factory id="connectionFactory" />
 
-	<!-- Creates a org.springframework.amqp.rabbit.core.RabbitTemplate for access 
-		to the broker -->
-	<rabbit:template id="amqpTemplate" connection-factory="connectionFactory" />
-
 	<!-- Creates a org.springframework.amqp.rabbit.core.RabbitAdmin to manage 
 		exchanges, queues and bindings -->
 	<rabbit:admin connection-factory="connectionFactory" />
@@ -38,7 +34,7 @@
 		id="serviceActivator" ref="serviceActivatorBean" method="logXml" />
 
 	<bean id="serviceActivatorBean"
-		class="com.goSmarter.amqp.service.Subscriber1ServiceActivator">
+		class="com.goSmarter.amqp.service.SubscriberServiceActivator">
 	</bean>
 
 </beans>
