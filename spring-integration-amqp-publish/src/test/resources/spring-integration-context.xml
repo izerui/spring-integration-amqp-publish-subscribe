@@ -40,4 +40,5 @@
  
     <int-amqp:outbound-channel-adapter channel="fanoutChannel"
 		amqp-template="amqpTemplate" exchange-name="fanout.exchange.1.name"/>
+		
 </beans>
