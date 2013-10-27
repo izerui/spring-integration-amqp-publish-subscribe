@@ -17,13 +17,14 @@
 * 通过 junit 调试 PublisherSubscriberTest.java 类
 
 好了,这个时候,登录http://localhost:15672/ 便可看到如下图
-[1]
+
+![1](https://github.com/izerui/spring-integration-amqp-publish-subscribe/blob/master/spring-integration-amqp-publish/20131027164607.png)
 
 queue.1.name 和 queue.2.name 都将收到发过来的消息
 
 查看 具体消息 如图,我们发送的是一个xml格式的消息:
 
-[2]
+![2](https://github.com/izerui/spring-integration-amqp-publish-subscribe/blob/master/spring-integration-amqp-publish/20131027170002.png)
 
 
 
